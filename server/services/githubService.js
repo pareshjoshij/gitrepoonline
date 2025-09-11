@@ -46,16 +46,4 @@ export async function getIssues(language) {
     throw new Error('Server error fetching issues from GitHub.');
   }
 }
-```
-
-### Your Final Mission to Go Live
-
-1.  **Update Your Local File:** Replace the code in your local `server/services/githubService.js` with the corrected code above.
-
-2.  **Commit and Push the Fix:** This is the final change that needs to go to your repository.
-    ```bash
-    git add server/services/githubService.js
-    git commit -m "fix(api): Add 'is:issue' to GitHub query to meet validation rules"
-    git push origin main
-    
 
