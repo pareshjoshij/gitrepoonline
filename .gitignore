@@ -2,7 +2,8 @@ Dependencies
 /node_modules
 /client/node_modules
 /server/node_modules
-pnpm-lock.yaml
+
+Lockfiles - Ignore the one we are NOT using
 package-lock.json
 client/package-lock.json
 server/package-lock.json
