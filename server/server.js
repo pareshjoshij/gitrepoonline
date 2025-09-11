@@ -1,25 +1,17 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
-import apiRoutes from './routes/api.js';
-
-// Load environment variables
-dotenv.config();
+// This is the corrected named import to match the export in api.js
+import { router as apiRoutes } from './routes/api.js';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors()); // Enable Cross-Origin Resource Sharing
-app.use(express.json()); // Body parser
+app.use(cors());
+app.use(express.json());
 
 // API Routes
 app.use('/api', apiRoutes);
-
-// Health Check Endpoint
-app.get('/', (req, res) => {
-  res.send('GitRepos.Online API is running!');
-});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
